@@ -1,0 +1,12 @@
+{
+  "cats": [
+    { "id": 1, "name": "Srecko", "description": "Moja macka"},
+    { "id": 2, "name": "Lily", "description": "Bijela macka"},
+    { "id": 3, "name": "Happy", "description": "Moja macka na eng"}
+  ],
+  "dogs": [
+    { "id": 1, "name": "Oddie", "description": "Moj glupi pas"},
+    { "id": 2, "name": "Kimi", "description": "Ne moj pas"},
+    { "id": 3, "name": "Rex", "description": "Tipicni pas"}
+  ]
+}
