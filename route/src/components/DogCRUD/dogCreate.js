@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { savePet } from "../../utils";
-import CatForm from "./catForm";
+import DogForm from "./dogForm";
 
-class AddCat extends Component {
+class AddDog extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "", description: "" };
@@ -21,8 +21,8 @@ class AddCat extends Component {
     const { description } = this.state;
     const { history } = this.props;
     if(name !== "" && description !== ""){
-      savePet("cats", name, description).then(response => {
-        history.push(`/cats/${response.id}`);
+      savePet("dogs", name, description).then(response => {
+        history.push(`/dogs/${response.id}`);
       });
     }
     else{
@@ -35,8 +35,8 @@ class AddCat extends Component {
     const { description } = this.state;
     return (
       <>
-        <h1>Add a cat</h1>
-        <CatForm
+        <h1>Add a dog</h1>
+        <DogForm
           name={name}
           description={description}
           onNameChange={this.handleNameInput}
@@ -48,4 +48,4 @@ class AddCat extends Component {
   }
 }
 
-export default AddCat;
+export default AddDog;

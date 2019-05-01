@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class CatForm extends Component {
+class DogForm extends Component {
   handleCancel = () => {
     const {history} = this.props;
     history.push(`/posts`);
@@ -21,4 +21,4 @@ class CatForm extends Component {
   }
 }
 
-export default CatForm;
+export default DogForm;

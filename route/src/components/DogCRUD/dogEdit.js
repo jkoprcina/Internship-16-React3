@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { fetchPet, updatePet } from "../../utils";
-import CatForm from "./catForm";
+import DogForm from "./dogForm";
 
-class EditCat extends Component {
+class EditDog extends Component {
   constructor(props) {
     super(props);
     this.state = { };
@@ -10,7 +10,7 @@ class EditCat extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    fetchPet("cats", id).then(response => {
+    fetchPet("dogs", id).then(response => {
       this.setState({
         name: response.name,
         description: response.description
@@ -30,9 +30,9 @@ class EditCat extends Component {
     const { name } = this.state;
     const { description } = this.state;
     const { history, match } = this.props;
-    updatePet("cats", match.params.id , name, description).then(
+    updatePet("dogs", match.params.id , name, description).then(
       response => {
-        history.push(`/cats/${response.id}`);
+        history.push(`/dogs/${response.id}`);
       }
     );
   };
@@ -42,8 +42,8 @@ class EditCat extends Component {
     const { description } = this.state;
     return (
       <>
-        <h1>Add a cat</h1>
-        <CatForm
+        <h1>Add a dog</h1>
+        <DogForm
           name={name}
           description={description}
           onNameChange={this.handleNameChange}
@@ -55,4 +55,4 @@ class EditCat extends Component {
   }
 }
 
-export default EditCat;
+export default EditDog;

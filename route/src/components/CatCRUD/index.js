@@ -13,13 +13,13 @@ class ListCat extends Component {
           <Route exact path="/cats" render={props => <CatList {...props} />} />
           <Route
             exact
-            path="/cats/:id"
-            render={props => <Cat {...props} />}
+            path="/cats/create"
+            render={props => <CatCreate {...props} />}
           />
           <Route
             exact
-            path="/cats/create"
-            render={props => <CatCreate {...props} />}
+            path="/cats/:id"
+            render={props => <Cat {...props} />}
           />
           <Route
             exact

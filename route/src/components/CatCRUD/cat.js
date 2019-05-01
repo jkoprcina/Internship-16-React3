@@ -1,14 +1,14 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { fetchPet } from "../../utils";
+import { fetchPet, deletePet } from "../../utils";
 
 class Cat extends Component {
   constructor(props) {
     super(props);
-    this.state = { cat: null };
+    this.state = { cat: {} };
   }
 
-  componentsDidMount() {
+  componentDidMount() {
     const { id } = this.props.match.params;
     fetchPet("cats", id).then(data => {
       this.setState({
@@ -17,16 +17,24 @@ class Cat extends Component {
     });
   }
 
+  deleteCat = () => {
+    const { id } = this.props.match.params;
+    const { history } = this.props;
+    deletePet("cats", id).then(() => {
+      history.push(`/cats`);
+    });
+  }
+
   render() {
     const { cat } = this.state;
-    if (!cat) {
-      return null;
-    }
     return (
       <div>
         <h1>Cat</h1>
-        <div>{cat.name}</div>
-        <Link to={`/cats/edit/${cat.id}`}></Link>
+        <div>Name: {cat.name}</div>
+        <div>Description: {cat.description}</div>
+        <Link to={`/cats/edit/${cat.id}`}>Edit</Link>
+        <Link to={`/cats`}>Close</Link>
+        <button onClick={this.deleteCat}>Delete</button>
       </div>
     );
   }

@@ -1,12 +1,36 @@
 {
   "cats": [
-    { "id": 1, "name": "Srecko", "description": "Moja macka"},
-    { "id": 2, "name": "Lily", "description": "Bijela macka"},
-    { "id": 3, "name": "Happy", "description": "Moja macka na eng"}
+    {
+      "name": "Srecko",
+      "description": "Moja macka",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Lily",
+      "description": "Bijela macka"
+    },
+    {
+      "id": 3,
+      "name": "Happy",
+      "description": "Moja macka na eng"
+    },
+    {
+      "name": "Random cat",
+      "description": "Random cat",
+      "id": 4
+    }
   ],
   "dogs": [
-    { "id": 1, "name": "Oddie", "description": "Moj glupi pas"},
-    { "id": 2, "name": "Kimi", "description": "Ne moj pas"},
-    { "id": 3, "name": "Rex", "description": "Tipicni pas"}
+    {
+      "id": 1,
+      "name": "Oddie",
+      "description": "Moj glupi pas"
+    },
+    {
+      "id": 2,
+      "name": "Kimi",
+      "description": "Ne moj pas"
+    }
   ]
 }
