@@ -25,8 +25,12 @@ class ListCat extends Component {
             <Link to={`/cats/${cat.id}`}>{cat.name}</Link>
           </div>
         ))}
-        <Link to={`/cats/create`}>Add New Cat</Link>
-        <Link to={`/main`}><button>Back</button></Link>
+        <Link to={`/cats/create`}>
+          <button>Add New Cat</button>
+        </Link>
+        <Link to={`/main`}>
+          <button>Back</button>
+        </Link>
       </div>
     );
   }

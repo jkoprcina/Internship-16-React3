@@ -25,8 +25,12 @@ class ListDog extends Component {
             <Link to={`/dogs/${dog.id}`}>{dog.name}</Link>
           </div>
         ))}
-        <Link to={`/dogs/create`}>Add New Dog</Link>
-        <Link to={`/main`}><button>Back</button></Link>
+        <Link to={`/dogs/create`}>
+          <button>Add New Dat</button>
+        </Link>
+        <Link to={`/main`}>
+          <button>Back</button>
+        </Link>
       </div>
     );
   }

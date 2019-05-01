@@ -23,7 +23,7 @@ class Dog extends Component {
     deletePet("dogs", id).then(() => {
       history.push(`/dogs`);
     });
-  }
+  };
 
   render() {
     const { dog } = this.state;
@@ -32,8 +32,12 @@ class Dog extends Component {
         <h1>dog</h1>
         <div>Name: {dog.name}</div>
         <div>Description: {dog.description}</div>
-        <Link to={`/dogs/edit/${dog.id}`}>Edit</Link>
-        <Link to={`/dogs`}>Close</Link>
+        <Link to={`/dogs/edit/${dog.id}`}>
+          <button>Edit</button>
+        </Link>
+        <Link to={`/dogs`}>
+          <button>Close</button>
+        </Link>
         <button onClick={this.deleteDog}>Delete</button>
       </div>
     );

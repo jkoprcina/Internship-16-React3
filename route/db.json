@@ -14,18 +14,13 @@
       "id": 3,
       "name": "Happy",
       "description": "Moja macka na eng"
-    },
-    {
-      "name": "Random cat",
-      "description": "Random cat",
-      "id": 4
     }
   ],
   "dogs": [
     {
-      "id": 1,
       "name": "Oddie",
-      "description": "Moj glupi pas"
+      "description": "Moj glupi pas",
+      "id": 1
     },
     {
       "id": 2,
